@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Insurance & Road Tax Renewal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .content {
+            margin: 100px 0 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            padding: 8px;
+        }
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .vehicle-btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .vehicle-btn img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Motor Insurance & Road Tax Renewal</div>
+    <div class="container">
+        <img src="/mnt/data/Car4.JPG" alt="Car" class="hero-image">
+        <img src="https://www.motorcyclevalley.com/images/news/Benelli-180S-coming-to-Bangladesh-soon.jpg" alt="Motorcycle" class="hero-image">
+        <div class="content">
+            <h2>Fast, Secure & Convenient</h2>
+            <p>Get instant insurance & road tax renewal with easy payment options.</p>
+            <a href="#quote-form" class="btn">Get a Quote</a>
+            <a href="#payment" class="btn">Make Payment</a>
+            <a href="#dashboard" class="btn">User Dashboard</a>
+        </div>
+        
+        <div class="content" id="quote-form">
+            <h2>Get a Quote</h2>
+            <p>Select your vehicle type:</p>
+            <button class="vehicle-btn" onclick="document.getElementById('car-form').style.display='block'; document.getElementById('bike-form').style.display='none';">
+                <img src="/mnt/data/Car4.JPG" alt="Car">
+            </button>
+            <button class="vehicle-btn" onclick="document.getElementById('bike-form').style.display='block'; document.getElementById('car-form').style.display='none';">
+                <img src="https://www.motorcyclevalley.com/images/news/Benelli-180S-coming-to-Bangladesh-soon.jpg" alt="Motorcycle">
+            </button>
+            
+            <form id="car-form" onsubmit="submitQuoteForm(event)" style="display:none;">
+                <h3>Car Insurance</h3>
+                <div class="form-group">
+                    <label for="car-vehicle">Vehicle Registration Number:</label>
+                    <input type="text" id="car-vehicle" name="car-vehicle" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-ic">IC Number:</label>
+                    <input type="text" id="car-ic" name="car-ic" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-postcode">Postcode:</label>
+                    <input type="text" id="car-postcode" name="car-postcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-phone">Phone Number:</label>
+                    <input type="text" id="car-phone" name="car-phone" required>
+                </div>
+                <button type="submit" class="btn">Submit Quote</button>
+            </form>
+            
+            <form id="bike-form" onsubmit="submitQuoteForm(event)" style="display:none;">
+                <h3>Motorcycle Insurance</h3>
+                <div class="form-group">
+                    <label for="bike-vehicle">Vehicle Registration Number:</label>
+                    <input type="text" id="bike-vehicle" name="bike-vehicle" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-ic">IC Number:</label>
+                    <input type="text" id="bike-ic" name="bike-ic" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-postcode">Postcode:</label>
+                    <input type="text" id="bike-postcode" name="bike-postcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-phone">Phone Number:</label>
+                    <input type="text" id="bike-phone" name="bike-phone" required>
+                </div>
+                <button type="submit" class="btn">Submit Quote</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
