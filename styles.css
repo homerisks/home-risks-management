@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    scroll-behavior: smooth;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+.header {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.content {
+    margin: 100px 0 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+label, input, select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.vehicle-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 10px;
+}
+.vehicle-btn img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
